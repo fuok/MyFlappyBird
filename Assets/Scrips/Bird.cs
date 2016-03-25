@@ -17,6 +17,7 @@ public class Bird : MonoBehaviour
 	void Update ()
 	{
 		if (GameManager.status == GameStatus.Playing) {
+			this.gameObject.GetComponent<Rigidbody2D> ().isKinematic=false;
 			this.gameObject.transform.Rotate(Vector3.forward*(-90)*Time.deltaTime);
 			if (Input.anyKeyDown) {
 				this.gameObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 5);//给小鸟向上的速度

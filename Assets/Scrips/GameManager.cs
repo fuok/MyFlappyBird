@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 	void Start ()
 	{
 		//初始化
-		status = GameStatus.Playing;
+		status = GameStatus.Waiting;
 		highest_score=PlayerPrefs.GetInt("highestScore");
 		score=0;
 	}
@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour
 	{
 
 		switch (status) {
+		case GameStatus.Waiting:
+			Time.timeScale = 1;
+			if (Input.anyKeyDown) {
+				StartCoroutine(startPlaying());
+			}
+			break;
 		case GameStatus.Playing:
 			Time.timeScale = 1;
 			break;
@@ -39,5 +45,12 @@ public class GameManager : MonoBehaviour
 			highest_score=score;
 			PlayerPrefs.SetInt("highestScore",highest_score);
 		}
+	}
+
+	//
+	private IEnumerator startPlaying()
+	{
+		yield return new WaitForEndOfFrame();
+		status = GameStatus.Playing;
 	}
 }

@@ -21,7 +21,7 @@ public class StartSceneGUI : MonoBehaviour {
 	void StartGame()
 	{
 //		Application.LoadLevel("MainScene");
-		SceneManager.LoadScene("MainScene",LoadSceneMode.Single);
+		SceneManager.LoadScene("GameScene1",LoadSceneMode.Single);
 	}
 
 	void ExitGame()

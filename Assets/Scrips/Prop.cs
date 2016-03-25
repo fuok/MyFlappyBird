@@ -16,9 +16,11 @@ public class Prop : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		this.transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-		if (this.gameObject.transform.position.x < -6.54) {
-			Destroy(this.gameObject);
+		if (GameManager.status == GameStatus.Playing) {
+			this.transform.Translate (Vector2.left * moveSpeed * Time.deltaTime);
+			if (this.gameObject.transform.position.x < -6.54) {
+				Destroy (this.gameObject);
+			}
 		}
 	}
 }
