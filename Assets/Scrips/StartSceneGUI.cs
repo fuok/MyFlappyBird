@@ -3,29 +3,47 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class StartSceneGUI : MonoBehaviour {
+public class StartSceneGUI : MonoBehaviour
+{
 
-	public Button btn_start,btn_exit;
+	public Button btnStart, btnExit, btnMode1, btnMode2, btnMode3;
+	public GameObject panel1, panel2;
 	// Use this for initialization
-	void Start () {
-	//UI初始化
-		btn_start.onClick.AddListener(StartGame);
-		btn_exit.onClick.AddListener(ExitGame);
+	void Start ()
+	{
+		panel2.SetActive (false);
+		//UI初始化
+		btnStart.onClick.AddListener (showModeSelect);
+		btnExit.onClick.AddListener (ExitGame);
+		btnMode1.onClick.AddListener (StartGame1);
+		btnMode2.onClick.AddListener (StartGame2);
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 	
 	}
 
-	void StartGame()
+	private void showModeSelect ()
 	{
-//		Application.LoadLevel("MainScene");
-		SceneManager.LoadScene("GameScene1",LoadSceneMode.Single);
+		panel1.SetActive (false);
+		panel2.SetActive (true);
 	}
 
-	void ExitGame()
+	private void StartGame1 ()
 	{
-		Application.Quit();
+//		Application.LoadLevel("MainScene");
+		SceneManager.LoadScene ("GameScene1", LoadSceneMode.Single);
+	}
+
+	private void StartGame2 ()
+	{
+		SceneManager.LoadScene ("GameScene2", LoadSceneMode.Single);
+	}
+
+	private void ExitGame ()
+	{
+		Application.Quit ();
 	}
 }

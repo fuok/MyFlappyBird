@@ -44,9 +44,18 @@ public class GameSceneGUI : MonoBehaviour
 
 	}
 
-	public void startGame ()
+	public void restartGame ()
 	{
-		SceneManager.LoadScene ("GameScene1");
+		switch (SceneManager.GetActiveScene ().name) {
+		case "GameScene1":
+			SceneManager.LoadScene ("GameScene1");
+			break;
+		case "GameScene2":
+			SceneManager.LoadScene ("GameScene2");
+			break;
+		default:
+			break;
+		}
 	}
 
 	public void GoHome ()
