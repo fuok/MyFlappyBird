@@ -17,6 +17,7 @@ public class StartSceneGUI : MonoBehaviour
 		btnExit.onClick.AddListener (ExitGame);
 		btnMode1.onClick.AddListener (StartGame1);
 		btnMode2.onClick.AddListener (StartGame2);
+		btnMode3.onClick.AddListener (StartGame3);
 	}
 	
 	// Update is called once per frame
@@ -46,6 +47,11 @@ public class StartSceneGUI : MonoBehaviour
 	private void StartGame2 ()
 	{
 		SceneManager.LoadScene ("GameScene2", LoadSceneMode.Single);
+	}
+
+	private void StartGame3 ()
+	{
+		SceneManager.LoadScene ("GameScene3", LoadSceneMode.Single);
 	}
 
 	private void ExitGame ()

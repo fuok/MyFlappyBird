@@ -53,6 +53,9 @@ public class GameSceneGUI : MonoBehaviour
 		case "GameScene2":
 			SceneManager.LoadScene ("GameScene2");
 			break;
+		case "GameScene3":
+			SceneManager.LoadScene ("GameScene3");
+			break;
 		default:
 			break;
 		}
