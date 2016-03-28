@@ -23,6 +23,12 @@ public class StartSceneGUI : MonoBehaviour
 	void Update ()
 	{
 	
+		if (Application.platform==RuntimePlatform.Android&&Input.GetKeyDown(KeyCode.Escape)) {
+			if (panel2.activeSelf) {
+				panel1.SetActive (true);
+				panel2.SetActive (false);
+			}
+		}
 	}
 
 	private void showModeSelect ()
