@@ -13,7 +13,7 @@ public class PropCreater : MonoBehaviour
 	{
 		//创建第一个
 		if ("GameScene1".Equals (SceneManager.GetActiveScene ().name)) {
-			GameObject.Instantiate (propPrefabs, new Vector3 (3.83f, 0.61f, 0), Quaternion.identity);
+			GameObject.Instantiate (propPrefabs, new Vector3 (6f, 0.61f, 0), Quaternion.identity);
 		} else if ("GameScene2".Equals (SceneManager.GetActiveScene ().name)) {
 			GameObject.Instantiate (enemyPrefabs, new Vector3 (5.45f, 0.55f, 0), Quaternion.identity);
 		} else if ("GameScene3".Equals (SceneManager.GetActiveScene ().name)) {
@@ -33,7 +33,7 @@ public class PropCreater : MonoBehaviour
 	{
 		//mode 1
 		if ("GameScene1".Equals (SceneManager.GetActiveScene ().name) && collider.tag.Equals ("Prop")) {//可以通过其他标签控制新的对象
-			Vector3 v3 = new Vector3 (collider.transform.position.x + 2.0f, Random.Range (-1.7f, 2.3f), collider.transform.position.z);
+			Vector3 v3 = new Vector3 (collider.transform.position.x + 3.0f, Random.Range (-1.7f, 2.3f), collider.transform.position.z);
 //			GameObject.Instantiate (collider.transform.parent.gameObject, v3, collider.transform.rotation);//注意是parent，上下水管是整体
 			GameObject.Instantiate (propPrefabs, v3, collider.transform.rotation);//也可以复制预设，避免克隆的名字越来越长
 			//还可以用水管重用的方法，没必要反复创建销毁，,TODO
