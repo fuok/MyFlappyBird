@@ -1,0 +1,119 @@
+fileFormatVersion: 2
+guid: 259218a00b19047448ea8adedc9eaad2
+timeCreated: 1459261277
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BigBoy_0
+    21300002: BigBoy_1
+    21300004: BigBoy_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BigBoy_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 50
+        width: 172
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 60}
+        - {x: -54, y: 60}
+        - {x: -86, y: 23}
+        - {x: -86, y: -50}
+        - {x: -81, y: -60}
+        - {x: 68, y: -60}
+        - {x: 86, y: -52}
+        - {x: 86, y: 26}
+    - name: BigBoy_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 50
+        width: 174
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 82, y: 25}
+        - {x: 56, y: 60}
+        - {x: -61, y: 60}
+        - {x: -74, y: 35}
+        - {x: -87, y: -4}
+        - {x: -87, y: -38}
+        - {x: -72, y: -58}
+        - {x: -30, y: -60}
+        - {x: 41, y: -60}
+        - {x: 72, y: -49}
+        - {x: 87, y: -35}
+        - {x: 87, y: 6}
+    - name: BigBoy_2
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 50
+        width: 172
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61, y: 60}
+        - {x: -86, y: 10}
+        - {x: -86, y: -60}
+        - {x: 86, y: -60}
+        - {x: 86, y: 40}
+        - {x: 54, y: 60}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
