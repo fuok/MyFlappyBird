@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour
 	{
 		if (GameManager.status == GameStatus.Playing) {
 //			bool flyUp = true;
-			print (mPosY);
 			if (this.transform.position.y > mPosY + mFlightRange) {
 //				print ("到达上界:" + this.transform.position.y);
 				flyUp = false;
@@ -31,10 +30,10 @@ public class Enemy : MonoBehaviour
 			}
 
 			if (flyUp) {
-//				print ("上");
+				//向上飞
 				this.transform.Translate (new Vector3 (Vector2.left.x, Vector2.up.y, 0) * moveSpeed * Time.deltaTime);
 			} else {
-//				print ("下");
+				//向下飞
 				this.transform.Translate (new Vector3 (Vector2.left.x, Vector2.down.y, 0) * moveSpeed * Time.deltaTime);
 			}
 				
