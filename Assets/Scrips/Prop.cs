@@ -2,7 +2,7 @@
 using System.Collections;
 
 /// <summary>
-/// 水管的脚本，不停地向左移动
+/// 水管的脚本,不停地向左移动
 /// </summary>
 public class Prop : MonoBehaviour
 {

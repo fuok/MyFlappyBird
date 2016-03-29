@@ -77,8 +77,7 @@ public class AudioManagerS : MonoBehaviour
 	public static void PlayBGMusic (AudioSource audioSource)
 	{
 		if (audioSource) {
-			mAuSourceBGMusic = audioSource;
-			mAuSourceBGMusic.Play ();
+			audioSource.Play ();
 		}
 	}
 
@@ -124,26 +123,13 @@ public class AudioManagerS : MonoBehaviour
 	}
 
 	/// <summary>
-	/// 传入AudioSource时使用这个方法
+	/// 传入AudioSource时使用这个方法,这个方法目前不支持多个音效一起播放
 	/// </summary>
 	/// <param name="audioSource">Audio source.</param>
 	public static void PlayEffAudio (AudioSource audioSource)
 	{
 		if (audioSource) {
-			AudioSource[] AS = mAudioManagerInstance.GetComponents<AudioSource> ();//先获取当前对象下的AudioSource
-			for (int i = 1; i < AS.Length; i++) {//跳过下标0,0位预留给背景音乐
-				if (!AS [i].isPlaying) {
-					AS [i] = audioSource;//音频剪辑的赋值
-					AS [i].Play ();//播放背景音乐
-					return;
-				} else {
-					//元素被占用
-				}
-			}
-			//当需要同时播放多个音效或当前对象的AudioSource不足,添加新AudioSource
-			AudioSource NewAS = mAudioManagerInstance.AddComponent<AudioSource> ();
-			NewAS = audioSource;
-			NewAS.Play ();
+			audioSource.Play ();
 		}
 	}
 
